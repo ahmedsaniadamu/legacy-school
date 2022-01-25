@@ -1,0 +1,112 @@
+//this stylesheet is specifically for side bar
+
+// media queries for responsiveness
+@import 'responsive' ;
+
+.sidebar{
+    background: rgb(38, 42, 248);
+    color: rgb(254, 254, 255);     
+    font-size: 0.5rem;
+    div.user-profile{
+         img{
+             height: 150px;
+             width: 150px;
+         }
+        p{
+            @include mobile-view(){
+                margin-bottom: 0.33rem !important;
+                margin-top: 0.33rem !important;
+            }
+
+            b{
+                font-weight: 600;
+                font-family: Play;
+            }
+            span{
+                font-size: 0.43rem;
+            }
+        }
+    }
+    .links-container{
+        a{
+            color: rgb(254, 254, 255);
+            text-decoration: none;            
+            width: 94%;
+            border-radius: 5px;
+            font-family:Play;
+            font-size: 0.45rem;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            margin-top: 0.23rem;
+            background: rgb(1, 1, 212);
+            transition: background 0.5s;
+            &:hover{
+                background: rgb(0, 0, 119);
+            }
+
+            @include mobile-view(){
+                font-size: 0.52rem;
+                margin-top: 0.33rem;
+            }
+            
+            .sprite-image{
+                border-radius: 50%;               
+                background: url(../Assets/sprite.png);
+                background-size: 300px 500px ;
+                background-repeat: no-repeat;
+                background-repeat: no-repeat;
+            }
+            #home{
+                height: 32px;
+                width: 32.5px;        
+                background-image: url(../Assets/sprite2.png);
+                background-size: 441.5px  200px;
+                background-position: -225.7px -22px;        
+            }
+            #about{
+                height: 30px;
+                width: 30px;                                
+                background-position:-42px -265px ;
+            }
+            #contact{
+                @extend #about;       
+                height: 30px;                              
+               background-position:-264px -92px ;
+            }
+            #dashboard{
+                @extend #contact ;
+                background-position: -264px -57px;
+            }
+            #gallery{
+                @extend #dashboard ;
+                background-position: -190px -57.5px;
+            }
+            #register{
+                @extend #gallery;
+                background-position: -190px -92px;
+            }
+            #hostel{
+                @extend #about ;
+                background-position:-42px -162px ;
+                
+            }
+            #exam{
+                @extend #about;
+                background-position:-42px -370px ;
+            }
+            #login{
+                @extend #gallery;
+                background-position: -153px -231px;
+            }
+            #blog{
+                @extend #gallery ;
+                background-position: -190px -127px;
+            }
+        }
+        a.active{
+            background: rgb(255, 255, 255); 
+            color: rgb(0, 0, 185);
+        }
+    }
+}

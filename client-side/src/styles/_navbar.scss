@@ -1,0 +1,162 @@
+@import 'responsive' ;
+
+//height of the navigation bar
+$navar-height : 50px ;
+
+nav{
+    background: rgb(38, 42, 248);
+    font-size: 0.7rem;
+    height: $navar-height;
+    color: rgb(255, 255, 255);   
+
+    @include mobile-view(500px){
+        height: $navar-height ;
+    }
+    img{
+        width: 60px;
+    }
+    span.school-name{
+         font-family: Play,sans-serif;
+         letter-spacing: 0.7px;
+         font-weight: 600;
+         font-size: 0.6rem;
+    }    
+    div.msg{
+         form{
+              span.input-group-text{
+                font-size: 0.45rem;
+                color: rgb(38, 0, 255);
+                background: rgb(255, 255, 255);
+                border: none;
+              }
+              input{
+                   font-size: 0.45rem !important;
+                   padding-top: 0.1rem !important;
+                   padding-bottom: 0.1rem !important;
+                   border: none;
+                   &:hover,&:active,&:focus{
+                      border: none;
+                      outline: none;
+                      box-shadow: 0 0 0 transparent;
+                   }
+              }
+         }
+        .messeges,.fa-bell{
+            font-size: 1rem;
+            color: rgb(255, 255, 255);
+            &:hover{ cursor: pointer; }  
+                                
+        }         
+    }
+    //slider toggler icon
+    .fa-bars{
+        font-size: 1rem;
+    } 
+    .offcanvas{         
+        .offcanvas-header{            
+            padding-left: 5px !important;
+            background: rgb(0, 4, 255);
+            
+                .notification-dropdown{
+                    .fa-bell{
+                        font-size:1.1rem;
+                    }                 
+                }
+                .messeges-dropdown{
+                    .fa-envelope{
+                        font-size:1.1rem;
+                }
+            }
+            form{
+                span.input-group-text{
+                  font-size: 0.45rem;
+                  color: rgb(38, 0, 255);
+                }
+                input{
+                     font-size: 0.55rem !important;                                          
+                     border: none;
+                     width: 170px;
+                     &:hover,&:active,&:focus{
+                        border: none;
+                        outline: none;
+                        box-shadow: 0 0 0 transparent;
+                     }                    
+                }                
+           }           
+        }
+    }
+    //dropdowns for notification and messeges 
+    .notification-dropdown,.messeges-dropdown{
+        .dropdown-menu{
+               height: 250px;
+               width: 200px !important;
+               overflow-y: scroll;               
+               @include mobile-view(){
+                height: 250px;
+               }
+
+            .dd-header{
+                background: rgb(37, 3, 230);
+                font-size: 0.7rem;                
+                color: rgb(255, 255, 255);
+                letter-spacing: 0.9px;
+                @include mobile-view(){
+                   font-size: 0.5rem;
+                   font-weight: 100 !important;                 
+                }
+            }
+            .media-object{
+                transition: .2s;               
+                    &:hover{
+                            cursor: pointer;
+                            background: rgb(209, 209, 255);                             
+                            }
+
+                .fa-check,.fa-cogs,.fa-calendar-alt{
+                    font-size: 0.6rem;
+                    height: 35px;  
+                    width: 35px;      
+                    display: flex;  
+                    justify-content: center;  
+                    align-items: center;  
+                    margin-top: 4px;
+                    color: rgb(255, 255, 255);
+                    border-radius: 50%;
+                }
+                .fa-check{ background: rgb(31, 189, 0);}
+                .fa-cogs{ background: rgb(189, 101, 0);}
+                .fa-calendar-alt{ background: rgb(163, 1, 42);}
+                .notification-body{      
+                    h6{
+                        font-size: 0.5rem;
+                        text-transform: lowercase;
+                        font-family: Play,sans-serif;
+                    }
+                    p{
+                        font-size: 0.4rem;
+                        opacity: 0.8;
+                        font-style: oblique;
+                    }
+                }  
+                    img{
+                        height: 50px;
+                        width: 50px;
+                        @include mobile-view(){ height: 30px;  width: 30px;    }
+                    }                               
+                .messeges{                      
+                    h6{
+                        font-size: 0.48rem;        
+                        color: rgba(0,0,0,0.8);     
+                        font-weight: 600;
+                        font-family: Play,sans-serif;          
+                    }
+                    p{
+                        font-size: 0.44rem;
+                        color: rgba(0,0,0,0.9); 
+                        font-family:Roboto,sans-serif;                         
+                    }
+                }
+            }            
+        }
+    }
+}

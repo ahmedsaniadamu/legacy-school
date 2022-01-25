@@ -1,0 +1,162 @@
+@import 'responsive' ;
+
+.examination-section{
+    .carousel{
+        .carousel-inner{
+            .carousel-item{                
+                img{
+                     height: 470px;
+                     width: 100%;
+                     filter: brightness(60%);
+                     @include mobile-view(){
+                         height: 280px;
+                     }
+                     @include tablet-view(){
+                         height: 400px;
+                     }
+                }
+                .carousel-caption{
+                    h3{
+                        font-size: 1rem;
+                        font-family: Play,sans-serif;
+                        padding: 0 !important;     
+                        margin: 0 !important; 
+                        @include mobile-view(){
+                             font-size: 0.8rem;
+                        }          
+                        @include tablet-view(){
+                            font-size: 0.8rem;
+                        }                       
+                    }
+                    p{
+                        font-size: 0.9rem;
+                         font-family:Teko,sans-serif;
+                         letter-spacing: 0.7px; 
+                         padding: 0 !important;     
+                         margin: 0 !important;    
+                         @include mobile-view(){
+                             font-size: 0.6rem;
+                        }     
+                        @include tablet-view(){
+                            font-size: 0.6rem;
+                        }           
+                    }
+                }
+            }
+        }
+    }
+    div.bread-crum{        
+        font-size: 0.45rem;
+        background: rgba(255, 255, 255, 1);
+        padding: { top: 5px !important; bottom: 5px !important};  
+        @include tablet-view(500px){
+            font-size: 0.5rem;
+        }         
+
+        a{             
+            font-family:Play, sans-serif;
+            font-weight: normal;
+            text-decoration: none;            
+        }
+        span{
+            font-size: 00.3rem;
+            color: rgb(151, 153, 252);
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+    }     
+    div.exam-rules{
+        .alert{
+           h5.header{
+               font-size: 0.6rem;
+               font-family: Play,sans-serif;
+           }
+           ol{
+               li{
+                   font-size: 0.5rem;
+                   font-family: Play,sans-serif;
+               }
+           }
+        }
+    }
+    div.exam-timetable{
+        background: rgb(255, 255, 255);
+        h5.header{
+            font: { size: 0.55rem; family : Play,sans-serif ; };
+            background: rgb(38, 42, 248);
+            color: rgba(255, 255, 255, 1);
+        }
+        table.table-striped{                 
+            thead{               
+                tr{                             
+                    th{
+                        font-size: 0.55rem;
+                        letter-spacing: 0.8px;
+                        color: rgba(0,0,0,0.6);                          
+                        border-style: dotted;                   
+                    }
+                }
+            }
+            tbody{
+                border-width:1px ;                
+                tr{
+                    td{
+                        font-size: 0.48rem;
+                        @include mobile-view(500px){ white-space: nowrap;}
+                    }
+                }
+            }
+        }
+    }
+    div.our-app{
+        background: rgb(38, 42, 248);
+        color: rgb(255, 255, 255);
+        .header{
+            font-family: Play,sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        p{
+            font-size: 0.5rem;
+        }
+        div.store{
+            span{
+                width: 115px;
+                height: 37px;                              
+                transform: translateY(-18px);                
+                background: url(../Assets/store.png);
+                background-size: 300px 160px;
+                background-repeat: no-repeat;
+                border-radius: 5px;
+                transition: .2s;
+                &:hover{ cursor: pointer; opacity: 0.8;}
+                @include mobile-view(){
+                    transform: scaleX(0.9) scaleY(0.9) translateY(-13px) ;
+                }
+            }
+            span.play{
+                background-position: -150px -32px;
+            }
+            span.ios{
+                background-position: -34px -32px;
+                width: 109px;
+            }
+        }
+    }
+   
+    .who-we-are{
+        background: rgb(255, 255, 255);
+        border-radius: 3px;
+        .header{
+            font-size: 0.5rem;
+            font-family: Play,sans-serif;          
+            color: rgba(255, 255, 255, 1);
+            background: rgb(38, 42, 248);
+        }
+        p{
+            font-size: 0.5rem;
+            font-family: Roboto,sans-serif;
+            @include mobile-view(){ font-size: 0.6rem; }
+        }
+    }
+}

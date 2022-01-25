@@ -1,0 +1,306 @@
+@import 'responsive' ;
+
+.home-section{        
+    .carousel{
+        .carousel-inner{
+            .carousel-item{                
+                img{
+                     height: 470px;
+                     width: 100%;
+                     filter: brightness(60%);
+                     @include mobile-view(){
+                         height: 280px;
+                     }
+                     @include tablet-view(){
+                         height: 400px;
+                     }
+                }
+                .carousel-caption{
+                    h3{
+                        font-size: 1rem;
+                        font-family: Play,sans-serif;
+                        padding: 0 !important;     
+                        margin: 0 !important; 
+                        @include mobile-view(){
+                             font-size: 0.8rem;
+                        }          
+                        @include tablet-view(){
+                            font-size: 0.8rem;
+                        }                       
+                    }
+                    p{
+                        font-size: 0.9rem;
+                         font-family:Teko,sans-serif;
+                         letter-spacing: 0.7px; 
+                         padding: 0 !important;     
+                         margin: 0 !important;    
+                         @include mobile-view(){
+                             font-size: 0.6rem;
+                        }     
+                        @include tablet-view(){
+                            font-size: 0.6rem;
+                        }           
+                    }
+                }
+            }
+        }
+    }
+    .x3{
+        &>div{
+            color: rgb(255, 255, 255);
+            h5{
+                font-size: 0.53rem;
+                @include mobile-view(){
+                    font-size: 0.6rem;
+                 }                    
+            }
+            p{
+                font-size: 0.45rem;
+                opacity: 0.9;
+                font-family: Roboto,sans-serif;
+                @include mobile-view(){
+                    font-size: 0.57rem;
+               }   
+            }
+            .icon{
+                font-size: 1.6rem;                
+            }
+        }
+        div.our-mission{
+            background: rgb(0, 90, 86);
+        }
+        div.our-vission{
+            background: rgb(38, 42, 248);
+        }
+        div.principles{
+            background: rgb(122, 0, 122);
+        }
+    }
+    .our-principal{
+        background: rgb(255, 255, 255);
+        @include mobile-view(750px){ flex-direction: column; }
+        .image-container{
+            img{
+                height: 300px;
+                width: 400px;
+                @include mobile-view(){ height: 300px; width: 100vw;}
+                @include tablet-view(500px,1000px){ height: 250px; width: 340px; margin-bottom: 5px;}
+            }
+        }
+        .content{
+            .header{
+                font-size: 0.7rem;
+                background: rgb(38, 42, 248);
+                color: rgb(255, 255, 255);
+                border-radius: 0 20px 20px 0;
+                @include mobile-view(750px){
+                    border-radius: 0;
+                    margin-top: 0.3rem !important;
+                }
+            }
+            .name,.title{
+                font-size: 0.6rem;
+                font-weight: 500;
+            }
+            .text{
+                font-size: 0.45rem;
+                @include mobile-view(){ font-size: 0.55rem; }
+                button{
+                    font-size: 0.4rem;
+                    background: rgb(38, 42, 248);
+                    color: rgb(255, 255, 255);
+                    padding: { bottom: 3px !important; top: 3px !important};
+                }
+            }
+
+        }
+    }
+    div.resources{
+        background: rgb(255, 255, 255);
+        div.guide{
+            h5.header{
+                color: rgb(255, 255, 255);
+                background: rgb(0, 102, 77);
+                font-size: 0.6rem;
+                border-radius: 0 20px 20px 0;
+                .fas{  font-size: 0.7rem;}
+                @include mobile-view(){ 
+                    border-radius: 0;
+                }
+            }
+            h6.sub-header{
+                font-size: 0.52rem;
+                color: rgb(0, 102, 77);
+                text-transform: capitalize;
+                font-weight: 600;
+                @include mobile-view(){ 
+                    margin: { left: 3px !important; right: 3px !important ;};
+                }
+            }
+            div.text{
+                font-size: 0.45rem;         
+                font-family: Roboto,sans-serif;   
+                @include mobile-view(){ 
+                    margin: { left: 3px !important; right: 3px !important ;};
+                    font-size: 0.55rem;
+                }
+                @include tablet-view(500px,960px){ font-size: 00.4rem;}
+            }
+            button.btn{
+                font-size: 0.4rem;
+                background: rgb(0, 102, 77);
+                color: rgb(255, 255, 255);
+                padding: { top: 4px ; bottom: 4px};
+                @include mobile-view(){ 
+                    margin: { left: 3px !important; right: 3px !important ;};
+                }
+                margin-bottom: 8px;
+            }
+        }
+        .support{
+            @extend div.guide;
+            h5.header,button.btn{
+                background: rgb(180, 88, 2);
+            }
+            h6.sub-header{
+                color:rgb(180, 88, 2) ;
+            }             
+        }
+        .library{
+            @extend div.guide;
+            h5.header,button.btn{
+                background: rgb(38, 42, 248);
+            }
+            h6.sub-header{
+                color:rgb(38, 42, 248) ;
+            }             
+        }
+    }
+    div.gallery{
+        background: rgb(255, 255, 255);
+        h6{
+            font-size: 0.5rem;          
+            background: rgb(38, 42, 248);
+            color:rgb(255,255,255);
+            opacity: 0.9;
+            letter-spacing: 1px;
+            font-family: Play,sans-serif;            
+        }
+        div.body{
+            &>div{
+                img{
+                    width: 100%;
+                    display: block;
+                    height: 300px;     
+                    border-radius: 5px;     
+                    @include mobile-view(){
+                        height: 230px;
+                    }
+                    @include tablet-view(500px,1000px){
+                        height: 230px;
+                    }
+                }
+            }
+        }
+    }
+    div.our-app{
+        background: rgb(38, 42, 248);
+        color: rgb(255, 255, 255);
+        .header{
+            font-family: Play,sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        p{
+            font-size: 0.5rem;
+        }
+        div.store{
+            span{
+                width: 115px;
+                height: 37px;                              
+                transform: translateY(-18px);                
+                background: url(../Assets/store.png);
+                background-size: 300px 160px;
+                background-repeat: no-repeat;
+                border-radius: 5px;
+                transition: .2s;
+                &:hover{ cursor: pointer; opacity: 0.8;}
+                @include mobile-view(){
+                    transform: scaleX(0.9) scaleY(0.9) translateY(-13px) ;
+                }
+            }
+            span.play{
+                background-position: -150px -32px;
+            }
+            span.ios{
+                background-position: -34px -32px;
+                width: 109px;
+            }
+        }
+    }
+    .blog{
+        background: rgb(255, 255, 255);
+        .header{
+            background: rgb(38, 42, 248);
+            color: rgb(255, 255, 255);
+            font-size: 0.6rem;         
+            font-family: Play,sans-serif;
+        }
+        div{
+            div.media-object{
+                img.post-img{
+                   height: 100px;
+                   width: 100px;
+                   border-radius: 3px;
+                   object-fit: cover;
+                }
+                div.post-body{
+                    h6{
+                        font-size: 0.5rem;
+                        color: rgba(0, 0, 0,0.8);   
+                        text-transform: capitalize;     
+                        font-weight: 600;      
+                        letter-spacing: 0.7px;                                    
+                        i{ 
+                             font-size: 0.36rem; opacity: 0.9; 
+                             text-transform: lowercase;
+                             span{
+                                 color: rgb(0, 0, 0);
+                             }
+                        }
+                    }
+                    p{
+                        font-size: 0.45rem;
+                        margin-top: 5px !important;    
+                        font-family: Roboto,sans-serif;        
+                        @include mobile-view(){ font-size: 0.55rem; }         
+                        a{
+                            color: rgb(38, 42, 248);
+                            text-transform: capitalize;
+                            font-size: 0.4rem;
+                            text-decoration: none;
+                            transition: .2s;
+                            &:hover{ cursor: pointer;}
+                            @include mobile-view(){ font-size: 0.6rem; }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .who-we-are{
+        background: rgb(255, 255, 255);
+        border-radius: 3px;
+        .header{
+            font-size: 0.5rem;
+            font-family: Play,sans-serif;          
+            color: rgba(255, 255, 255, 1);
+            background: rgb(38, 42, 248);
+        }
+        p{
+            font-size: 0.5rem;
+            font-family: Roboto,sans-serif;
+            @include mobile-view(){ font-size: 0.6rem; }
+        }
+    }
+}

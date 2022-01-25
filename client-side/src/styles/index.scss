@@ -1,0 +1,75 @@
+ //reset browser default style
+@import 'reset' ;
+
+// media queries for different devices.
+@import 'responsive' ;
+
+html{
+    font-family: Roboto,sans-serif;
+    font-size: 32px !important;     
+    @include mobile-view(){
+        font-size: 25px !important;
+    }
+    @include tablet-view(){
+        font-size: 25px !important;
+    }
+       /* hide side scroll bar icon from the page and keep functionality */
+      /* for chrome , internet explorer edge and firefox */
+
+      -ms-overflow-style: none;
+      margin: 0;
+     padding: 0;
+
+     /* hide side scroll bar icon from the page and keep functionality */
+     /* for chrome , opera and safari */
+
+    ::-webkit-scrollbar{
+        display: none;
+        width: 0;
+    }
+
+    // for react router page transition effectiveness.     
+    body{
+        height: 100vh ;   
+        overflow-y: scroll;
+        background: rgb(218, 234, 251);
+        #root{
+            height: 100%;
+            overflow: scroll;
+        }
+    }
+} 
+//side bar and main content wrapper
+.main-container{
+     @media screen  and (min-width:1000px) {
+        .sidebar-wrapper{
+            width: 20% !important;
+        }
+        .main-content-wrapper{
+            width: 80%
+        }
+     }      
+}
+//navbar component style.
+@import 'navbar' ;
+//sidebar component style
+@import 'sidebar' ;
+//homepage main content
+@import 'home' ;
+//about page main content
+@import 'about' ;
+//gallery page main content
+@import 'gallery' ;
+//contact page main content
+@import 'contact' ;
+//dashboard contents
+@import 'dashboard' ;
+//accomandation contents
+@import 'accomandation' ;
+//registration contents
+@import 'registration' ;
+@import 'examination-timetabe';
+@import 'login';
+@import 'blog' ;
+//footer component style
+@import 'footer';

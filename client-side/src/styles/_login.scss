@@ -1,0 +1,302 @@
+@import 'responsive' ;
+
+.login-section,.forgot-password-section{
+    .carousel{
+        .carousel-inner{
+            .carousel-item{                
+                img{
+                     height: 470px;
+                     width: 100%;
+                     filter: brightness(60%);
+                     @include mobile-view(){
+                         height: 280px;
+                     }
+                     @include tablet-view(){
+                         height: 400px;
+                     }
+                }
+                .carousel-caption{
+                    h3{
+                        font-size: 1rem;
+                        font-family: Play,sans-serif;
+                        padding: 0 !important;     
+                        margin: 0 !important; 
+                        @include mobile-view(){
+                             font-size: 0.8rem;
+                        }          
+                        @include tablet-view(){
+                            font-size: 0.8rem;
+                        }                       
+                    }
+                    p{
+                        font-size: 0.9rem;
+                         font-family:Teko,sans-serif;
+                         letter-spacing: 0.7px; 
+                         padding: 0 !important;     
+                         margin: 0 !important;    
+                         @include mobile-view(){
+                             font-size: 0.6rem;
+                        }     
+                        @include tablet-view(){
+                            font-size: 0.6rem;
+                        }           
+                    }
+                }
+            }
+        }
+    }
+    div.bread-crum{        
+        font-size: 0.45rem;
+        background: rgba(255, 255, 255, 1);
+        padding: { top: 5px !important; bottom: 5px !important};  
+        @include tablet-view(500px){
+            font-size: 0.5rem;
+        }         
+
+        a{             
+            font-family:Play, sans-serif;
+            font-weight: normal;
+            text-decoration: none;            
+        }
+        span{
+            font-size: 00.3rem;
+            color: rgb(151, 153, 252);
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+    }    
+  div.nav-container{
+       background: rgba(255, 255, 255, 1);
+        ul.nav-tabs{
+            li.nav-item{
+                a.nav-link{
+                    font-size: 0.5rem;
+                    font-family: Play,sans-serif; 
+                    border: none;                       
+                    letter-spacing: 0.9px;   
+                    border: 1px solid rgb(138, 155, 248);  
+                   
+                    @include mobile-view(){ 
+                         width: 160px; 
+                         padding-left: 0 !important;
+                         padding-right: 0 !important;
+                         font-size: 0.45rem;
+                         text-align: center;
+                    }        
+                }
+                a.active{
+                    background: rgba(3, 38, 236, 1);
+                    color: rgba(255, 255, 255, 1);
+                }
+            }
+        }
+        div.tab-content{             
+            div.tab-pane{
+                @include mobile-view(){ width: 100%; margin: 0 auto 0 auto; padding: 0;}
+                div.student-login,div.teacher-login,div.admin-login{
+                     border-radius: 5px;     
+                     width: 45%;               
+                     @include tablet-view(500px,900px){ width: 80%; }
+                     @include mobile-view(){ width: 94%; margin: 0 auto 0 auto; padding: 0;}
+                    
+                      img{
+                          height: 80px;
+                          width: 200px;
+                      }
+                      h6{
+                          font-size: 0.6rem;
+                          font-family: Play,sans-serif;
+                          color: rgb(117, 119, 252);
+                      }
+                    form{                                              
+                         width: 95%;
+                            label{
+                                font-size: 0.5rem;
+                                text-transform: lowercase;                                     
+                                letter-spacing: 0.8px;     
+                                margin-left: 0.2rem;                                
+                                i.text-danger{
+                                    margin-left: -5px;
+                                }                                 
+                            }
+                            input{
+                                font-size: 0.49rem;
+                                transition: border-color 0.5s;                                
+                                &:focus{
+                                    box-shadow:  0 0 0 transparent;                                         
+                                }
+                         }                          
+                    }                    
+                    p{
+                        font-size: 0.45rem;
+                    }
+                    button{
+                        width: 200px;
+                        font-size: 0.5rem;
+                        font-family: Play,sans-serif;
+                        transition: transform 0.5s;
+                        letter-spacing: 0.8px;
+                        &:focus{
+                            box-shadow: 0 0 0 transparent;
+                            transform: scaleX(0.95);
+                        }
+                    }
+                    a{
+                        font-size: 0.45rem;
+                    }
+                }
+            }
+        }
+   }
+   
+    .notice-board{
+        background: rgba(255, 255, 255, 1);
+        h5{
+            font-size: 0.6rem;
+            font-family: Play,sans-serif;
+            background: rgb(38, 42, 248);
+            color: rgba(255, 255, 255, 1);
+            span{
+                font-size: 0.7rem;
+            }
+            @include mobile-view(){ font-size: 0.5rem; }
+        }
+        div{        
+            font-size: 0.45rem;
+            font-family: Roboto,sans-serif;
+            @include mobile-view(){ font-size: 0.5rem; }
+            h6{
+                font-size: 0.55rem;           
+                font-family: Play,sans-serif;
+                color: rgba(3, 38, 236, 1);
+                @include mobile-view(){ font-size: 0.5rem; }
+            }
+        }
+      }
+
+    div.our-app{
+        background: rgb(38, 42, 248);
+        color: rgb(255, 255, 255);
+        .header{
+            font-family: Play,sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        p{
+            font-size: 0.5rem;
+        }
+        div.store{
+            span{
+                width: 115px;
+                height: 37px;                              
+                transform: translateY(-18px);                
+                background: url(../Assets/store.png);
+                background-size: 300px 160px;
+                background-repeat: no-repeat;
+                border-radius: 5px;
+                transition: .2s;
+                &:hover{ cursor: pointer; opacity: 0.8;}
+                @include mobile-view(){
+                    transform: scaleX(0.9) scaleY(0.9) translateY(-13px) ;
+                }
+            }
+            span.play{
+                background-position: -150px -32px;
+            }
+            span.ios{
+                background-position: -34px -32px;
+                width: 109px;
+            }
+        }
+    }
+
+    .who-we-are{
+        background: rgb(255, 255, 255);
+        border-radius: 3px;
+        .header{
+            font-size: 0.5rem;
+            font-family: Play,sans-serif;          
+            color: rgba(255, 255, 255, 1);
+            background: rgb(38, 42, 248);
+        }
+        p{
+            font-size: 0.5rem;
+            font-family: Roboto,sans-serif;
+            @include mobile-view(){ font-size: 0.6rem; }
+        }
+    }
+}
+
+//forgot password form
+div.forgot-password-form{
+   background: rgb(255, 255, 255);
+   .form-container{
+        border-radius: 5px;     
+        width: 60%;               
+        @include tablet-view(500px,900px){ width: 80%; }
+        @include mobile-view(){ width: 94%; margin: 0 auto 0 auto; padding: 0;}
+        form{
+                img{
+                    height: 90px;
+                    width: 220px;
+                }
+                h6{
+                    font-size: 0.6rem;
+                    font-family: Play,sans-serif;
+                    color: rgb(117, 119, 252);
+                }     
+                p.sub-header{
+                    font-size: 0.5rem;                    
+                }            
+                label{
+                        font-size: 0.49rem;
+                        text-transform: lowercase;                                     
+                        letter-spacing: 0.8px;     
+                        margin-left: 0.2rem;                                
+                        i.text-danger{
+                            margin-left: -5px;
+                        }                                 
+                    }
+                input{
+                        font-size: 0.48rem;
+                        transition: border-color 0.5s;                                
+                        &:focus{
+                            box-shadow:  0 0 0 transparent;                                         
+                        }
+                     }
+                p{
+                    font-size: 0.45rem;
+                }
+                button{
+                    width: 200px;
+                    font-size: 0.5rem;
+                    font-family: Play,sans-serif;
+                    transition: transform 0.5s;
+                    letter-spacing: 0.8px;
+                    &:focus{
+                        box-shadow: 0 0 0 transparent;
+                        transform: scaleX(0.95);
+                    }
+                }    
+        }     
+   }
+}
+
+//is not loggin component style
+div.is-not-login{
+     background: rgba(255, 255, 255, 1);
+    img{
+        width: 400px;
+        height: 300px;
+        @include mobile-view(550px){
+            width: 90%;
+            height: 250px;
+        }
+    }
+    p{
+        font-size: 0.5rem;
+        a{
+            font-size: 0.5rem;
+        }
+    }
+}

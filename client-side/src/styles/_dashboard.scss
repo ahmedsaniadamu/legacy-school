@@ -1,0 +1,489 @@
+/* this style sheet is responsible for styling 4 pages. dashboard menu, student and teachers
+   dashboard as well as admin dashboard
+*/
+
+@import 'responsive' ;
+
+.dashboard-section{
+    .carousel{
+        .carousel-inner{
+            .carousel-item{                
+                img{
+                     height: 470px;
+                     width: 100%;
+                     filter: brightness(60%);
+                     @include mobile-view(){
+                         height: 280px;
+                     }
+                     @include tablet-view(){
+                         height: 400px;
+                     }
+                }
+                .carousel-caption{
+                    h3{
+                        font-size: 1rem;
+                        font-family: Play,sans-serif;
+                        padding: 0 !important;     
+                        margin: 0 !important; 
+                        @include mobile-view(){
+                             font-size: 0.8rem;
+                        }          
+                        @include tablet-view(){
+                            font-size: 0.8rem;
+                        }                       
+                    }
+                    p{
+                        font-size: 0.9rem;
+                         font-family:Teko,sans-serif;
+                         letter-spacing: 0.7px; 
+                         padding: 0 !important;     
+                         margin: 0 !important;    
+                         @include mobile-view(){
+                             font-size: 0.6rem;
+                        }     
+                        @include tablet-view(){
+                            font-size: 0.6rem;
+                        }           
+                    }
+                }
+            }
+        }
+    }
+    div.bread-crum{        
+        font-size: 0.45rem;
+        background: rgba(255, 255, 255, 1);
+        padding: { top: 5px !important; bottom: 5px !important};  
+        @include tablet-view(500px){
+            font-size: 0.5rem;
+        }         
+
+        a{             
+            font-family:Play, sans-serif;
+            font-weight: normal;
+            text-decoration: none;            
+        }
+        span{
+            font-size: 00.3rem;
+            color: rgb(151, 153, 252);
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+        button{
+            font-size: 0.45rem;
+            background: rgb(0, 151, 50);
+            padding: 0;
+            border: none;
+            border-radius: 0 !important;
+            &:focus{
+                box-shadow: 0 0 0 transparent;
+            }
+        }
+    }     
+     
+    div.our-app{
+        background: rgb(38, 42, 248);
+        color: rgb(255, 255, 255);
+        .header{
+            font-family: Play,sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        p{
+            font-size: 0.5rem;
+        }
+        div.store{
+            span{
+                width: 115px;
+                height: 37px;                              
+                transform: translateY(-18px);                
+                background: url(../Assets/store.png);
+                background-size: 300px 160px;
+                background-repeat: no-repeat;
+                border-radius: 5px;
+                transition: .2s;
+                &:hover{ cursor: pointer; opacity: 0.8;}
+                @include mobile-view(){
+                    transform: scaleX(0.9) scaleY(0.9) translateY(-13px) ;
+                }
+            }
+            span.play{
+                background-position: -150px -32px;
+            }
+            span.ios{
+                background-position: -34px -32px;
+                width: 109px;
+            }
+        }
+    }
+
+    .who-we-are{
+        background: rgb(255, 255, 255);
+        border-radius: 3px;
+        .header{
+            font-size: 0.5rem;
+            font-family: Play,sans-serif;          
+            color: rgba(255, 255, 255, 1);
+            background: rgb(38, 42, 248);
+        }
+        p{
+            font-size: 0.5rem;
+            font-family: Roboto,sans-serif;
+            @include mobile-view(){ font-size: 0.6rem; }
+        }
+    }
+}
+
+//dashboard menu page. main content style.
+div.dashboard-menu{
+    .menu-links{
+            &>a{
+                color: rgb(255, 255, 255);     
+                text-decoration: none;     
+                transition: transform 0.5s;
+                &:hover{
+                    opacity: 1;
+                    transform: scale(0.95);
+                }      
+                h5{
+                    font-size: 0.53rem;
+                    font-family: Play,sans-serif;
+                    @include mobile-view(){
+                        font-size: 0.6rem;
+                    }                    
+                }
+                .icon{
+                    font-size: 1.7rem;
+                    @include mobile-view(){
+                        font-size: 1.9rem;
+                    }
+                }
+            }
+            a.student{
+                background: rgb(1, 150, 142);
+            }
+            a.teacher{
+                background: rgb(81, 87, 1);
+            }
+            a.admin{
+                background: rgb(122, 0, 41);
+            }
+        }
+}
+.notice-board{
+    background: rgba(255, 255, 255, 1);
+    h5{
+        font-size: 0.6rem;
+        font-family: Play,sans-serif;
+        background: rgb(38, 42, 248);
+        color: rgba(255, 255, 255, 1);
+        span{
+            font-size: 0.7rem;
+        }
+        @include mobile-view(){ font-size: 0.5rem; }
+    }
+    div{        
+        font-size: 0.45rem;
+        font-family: Roboto,sans-serif;
+        @include mobile-view(){ font-size: 0.5rem; }
+        h6{
+            font-size: 0.55rem;           
+            font-family: Play,sans-serif;
+            color: rgba(3, 38, 236, 1);
+            @include mobile-view(){ font-size: 0.5rem; }
+        }
+    }
+}
+
+//admin dashboard main content style
+div.admin-content-wrapper,div.student-content-wrapper,div.teacher-content-wrapper{
+   div.calender-container{
+       background: rgba(255, 255, 255, 1);
+       h5.header{
+           background: rgb(38, 42, 248);
+           color: rgba(255, 255, 255, 1);
+           font-size: 0.5rem;
+       }
+        div.calender{
+            .w-100{
+                font-size: 0.6rem;
+                @include mobile-view(500px){
+                    font-size: 0.45rem;
+                }
+            }
+        }
+   }
+   div.admin-menus{
+       background: rgb(0, 112, 112);
+       color: rgba(255, 255, 255, 1);
+       div{
+           h3{
+               font-size: 0.8rem;
+           }
+           h6{
+               font-size: 0.6rem;
+           }
+           p{
+               font-size: 0.45rem;
+           }
+       }
+       .student{
+           background: rgb(0, 165, 110);
+       }
+       .teacher{
+           background: rgb(167, 19, 63);
+       }
+       .hostel{
+           background: rgb(204, 167, 2);
+       }
+   }
+   div.students-table,div.teachers-table{
+    background: rgb(255, 255, 255);     
+    h5.header{
+        font: { size: 0.58rem;  };
+        background: rgb(38, 42, 248);
+        color: rgba(255, 255, 255, 1);
+    }
+    &>div{
+        overflow-x: scroll;
+    }
+    table.table-striped{                 
+        thead{               
+            tr{                             
+                th{
+                    padding-top: 0.2rem;
+                    margin-top: 0;
+                    padding-bottom: 0.2rem;
+                    font-size: 0.5rem;                   
+                    color: rgba(0,0,0,1);                                                           
+                    font-weight: normal;
+                    @include mobile-view(500px){ white-space: nowrap;}
+                }
+            }
+        }
+        tbody{
+            border-width:1px ;                
+            tr{
+                td{
+                    font-size: 0.48rem;
+                    margin: 0;
+                    padding-top: 0.3rem;
+                    padding-bottom: 0.3rem;
+                    @include mobile-view(500px){ white-space: nowrap;}
+                    span{
+                        background: rgb(38, 42, 248);
+                        font-size: 0.45rem;
+                        &:focus{
+                            box-shadow: 0 0 0 transparent;
+                        }
+                    }
+                }
+            }            
+        }
+    }
+ div.modal-window{
+        width: 60%;
+        height: 80vh;
+        top: 50%;
+        right: 14%;
+        overflow-y: scroll;
+        transform: translateY(-50%);
+        @include mobile-view(500px){ 
+                    width: 96%; height: 70vh; right: 0; top: 70px; left: 50%;
+                    transform: translateY(0) translateX(-50%);
+         }
+        @include tablet-view(502px,780px){ width: 70%; height: 70vh; right: 7%;}
+        h5{
+            span{  
+                font-family: Play,sans-serif;font-weight: 600;
+                transition: .1s;                
+                &:hover{
+                    cursor: pointer;
+                    background: rgb(255, 29, 48);
+                }
+             }
+          }
+        &>div{
+                   &>div{
+           img{
+               width: 180px;
+               height: 130px;
+               display: block;
+               object-fit: cover;
+               border-radius: 2px;
+               @include mobile-view(500px){
+                width: 160px;
+                height: 120px;
+               }
+           }
+           ul{
+               list-style: none;
+               li{
+                   font-size: 0.5rem;
+                   b{
+                       font-size: 0.47rem;
+                       color: rgba(5, 5, 5, 0.8);                       
+                       font-weight: 600;
+                   }
+               }
+           }
+           &>ul{
+               li{ padding-left: 5px !important; }
+               li:nth-child(odd){
+                   background: rgb(231, 231, 231);                    
+               }
+           }
+        }
+      }
+    }
+    .pagination{
+        list-style : none ;
+        font-size: 0.45rem;
+        .btn{
+            font-size: 0.45rem;
+            &:focus{
+                box-shadow: 0 0 0 transparent;
+            }
+        }
+    }
+}
+   div.student-profile,div.teacher-profile{
+       background: rgb(255, 255, 255);
+       h5.header{
+           align-items: center;
+           background: rgb(38, 42, 248);
+           color: rgba(255, 255, 255, 1);
+           font-size: 0.5rem;
+           padding-top: 0.12rem !important;
+           padding-bottom: 0.12rem !important;
+           a{
+               font-size: 0.46rem;
+               padding-top: 0.18rem !important;
+               padding-bottom: 0.18rem !important;
+               color: rgba(3, 38, 236, 1);
+           }
+       }
+       &>div{
+           img{
+               width: 180px;
+               height: 130px;
+               display: block;
+               object-fit: cover;
+               border-radius: 2px;
+               @include mobile-view(500px){
+                width: 160px;
+                height: 120px;
+               }
+           }
+           ul{
+               list-style: none;
+               li{
+                   font-size: 0.5rem;
+                   b{
+                       font-size: 0.47rem;
+                       color: rgba(5, 5, 5, 0.8);                       
+                       font-weight: 600;
+                   }
+               }
+           }
+           &>ul{
+               li{ padding-left: 5px !important; }
+               li:nth-child(odd){
+                   background: rgb(231, 231, 231);                    
+               }
+           }
+       }
+   }
+}
+//student edit profile components style
+div.student-edit-profile,div.teacher-edit-profile{
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 1);
+    .header{ 
+        font-size: 0.6rem;
+        font-family: Play,sans-serif;
+        background: rgb(38, 42, 248);
+        color: rgba(255, 255, 255, 1);
+        border-radius: 5px 5px 0 0;
+    }
+   form{
+        label.file{
+            img{
+                height: 150px;
+                width: 180px;
+                @include mobile-view(500px){ 
+                    height: 120px;
+                    width: 140px;
+                 }
+            }
+            border: 1.5px dotted rgb(38, 42, 248);
+            color: rgb(38, 42, 248);
+            font-size: 0.45rem;
+            &:hover{ cursor: pointer;}
+            i.fa-image{
+                font-size: 1.4rem;
+                @include mobile-view(){ font-size: 1rem; }
+            }
+        }
+        input.file{  
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
+        div.input-wrapper{
+           div{
+                padding-left: 0.4rem !important;
+                padding-right: 0.4rem !important ;
+                label{
+                    font-size: 0.47rem;
+                    text-transform: lowercase;                                     
+                    letter-spacing: 0.8px;     
+                    margin-left: 0.2rem;                        
+                    i.text-danger{
+                        margin-left: -5px;
+                    }                                 
+                }
+                input,select,textarea{
+                    font-size: 0.45rem;
+                    transition: border-color 0.5s;                                    
+                    &:focus{
+                        box-shadow:  0 0 0 transparent;                                         
+                    }
+                    option{
+                       padding-top: 5px;
+                       padding-bottom: 5px;
+                    }
+                }
+                textarea.messege{
+                    height: 150px;
+                }
+            }
+        }
+   }
+   .agreement{
+       .form-check-input{
+           height: 21px;
+           width: 21px;
+           border-radius: 3px;
+           &:focus{ box-shadow: 0 0 0 transparent; }
+       }
+       .form-check-label{
+           font-size: 0.48rem;
+           color: rgba(3, 38, 236, 1);
+           font-family: Roboto,sans-serif;
+       }
+   }
+   p.status{
+       font-size: 0.45rem;
+   }
+   button.register-btn{
+       width: 300px;
+       font-size: 0.5rem;
+       font-family: Play,sans-serif;
+       transition: transform 0.5s;
+       letter-spacing: 0.8px;
+       &:focus{
+           box-shadow: 0 0 0 transparent;
+           transform: scaleX(0.95);
+       }
+   }
+}
