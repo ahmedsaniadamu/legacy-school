@@ -53,6 +53,6 @@
  * also users password is protected using php password hashing algorithm to ensure data security
 
 ## SITE ADDRESS
-      you can visit the side at .....
+      you can visit the side at https://legacysecondaryschool.netlify.app
 
    
